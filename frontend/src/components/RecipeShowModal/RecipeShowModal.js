@@ -57,8 +57,7 @@ function RecipeShowModal({ recipe, recipeContext }) {
                     <TbTrash className="recipe-menu-button" onClick={e => handleClick(e, "unfavorite")} />
                 </div>
             } else if (recipeContext === 'planned') {
-                title = <h4>{recipe.label}</h4>
-                
+                title = <h4 className='recipe-list-label'>{recipe.label}</h4>
                 menuItems = <div className='menu-items planned'>
                     {addToFavoritedButton}
                     <TbTrash className="recipe-menu-button" onClick={e => handleClick(e, "unplan")} />
@@ -75,7 +74,7 @@ function RecipeShowModal({ recipe, recipeContext }) {
                     }
                 }
 
-                title = <h4>{recipe.recipe.label}</h4>
+                title = <p>{recipe.recipe.label}</p>
                 menuItems = <div className='menu-items-search-result'>
                     <div className='recipe-score'>
                          Ingredient score:
