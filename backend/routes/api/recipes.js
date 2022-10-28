@@ -54,8 +54,23 @@ router.post("/ingredients", async(req, res) => {
         //recipesQuery = await Recipe.find({"ingredients.food": {$all: query}})
         recipesQuery = await getRecipes(query)
 
-        const ingredientScore = Math.round((query.length / numQueryIngredients) * 100)
+        let ingredientScore = Math.round((query.length / numQueryIngredients) * 100)
+        
         let shoppingScore;
+
+        // recipesQuery.forEach(recipe => {
+        //     shoppingScore = calculateShoppingScore(cubberd, recipe)
+        //     while (recipesByIngredientScore.length < 3 || ingredientScore === 100) {
+        //         if (!recipesByIngredientScore.some(bundle => bundle.recipe.url === recipe.url)) recipesByIngredientScore.push({"ingredientsScore": ingredientScore, "shoppingScore": shoppingScore, "recipe": recipe})
+        //     }
+        // })
+
+        // recipesQuery.forEach(recipe => {
+        //     shoppingScore = calculateShoppingScore(cubberd, recipe)
+        //     if (!recipesByShoppingScore.some(bundle => bundle.recipe.url === recipe.url)) recipesByShoppingScore.push({"ingredientsScore": ingredientScore, "shoppingScore": shoppingScore, "recipe": recipe})
+        // })
+
+    
         recipesQuery.forEach(recipe => {
 
             shoppingScore = calculateShoppingScore(cubberd, recipe)
