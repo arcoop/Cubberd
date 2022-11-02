@@ -186,7 +186,7 @@ function AboutPage() {
               >
                 <FaAngellist />
               </a>
-              <a href="https://www.linkedin.com/in/sungyo-kim-ab7a30163">
+              <a href="https://www.linkedin.com/in/sungyotkim">
                 <FaLinkedin />
               </a>
             </div>
