@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { Link, Redirect, useHistory } from "react-router-dom";
-import { FaGithubSquare, FaLinkedin, FaAngellist } from "react-icons/fa";
+import {
+  FaGithubSquare,
+  FaLinkedin,
+  FaAngellist,
+  FaUserAstronaut,
+} from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import "./AboutPage.css";
 import tommyPic from "../../assets/tommy.jpg";
@@ -144,10 +149,20 @@ function AboutPage() {
               <span>Bug exterminator</span>
             </div>
             <div className="teammate-card-links">
-              <a href="https://github.com/fredchien3/">
+              <a href="https://github.com/fredchien3/" target="_blank">
                 <FaGithubSquare />
               </a>
-              <a href="https://www.linkedin.com/in/fchien/">
+              <a href="https://fredchien.com/" target="_blank">
+                <FaUserAstronaut />
+              </a>
+              <a
+                href="https://angel.co/u/fred-chien"
+                className="angel-list"
+                target="_blank"
+              >
+                <FaAngellist />
+              </a>
+              <a href="https://www.linkedin.com/in/fchien/" target="_blank">
                 <FaLinkedin />
               </a>
             </div>
@@ -160,10 +175,13 @@ function AboutPage() {
               <span>Algorithm expert</span>
             </div>
             <div className="teammate-card-links">
-              <a href="https://github.com/arcoop/">
+              <a href="https://github.com/arcoop/" target="_blank">
                 <FaGithubSquare />
               </a>
-              <a href="https://www.linkedin.com/in/adina-cooper/">
+              <a
+                href="https://www.linkedin.com/in/adina-cooper/"
+                target="_blank"
+              >
                 <FaLinkedin />
               </a>
             </div>
@@ -176,17 +194,22 @@ function AboutPage() {
               <span>API handler</span>
             </div>
             <div className="teammate-card-links">
-              <a href="https://github.com/sungyotkim">
+              <a href="https://github.com/sungyotkim" target="_blank">
                 <FaGithubSquare />
               </a>
-              <a href="https://tommykim.me" id="website-logo-tommy"></a>
+              <a
+                href="https://tommykim.me"
+                id="website-logo-tommy"
+                target="_blank"
+              ></a>
               <a
                 href="https://angel.co/u/sungyo-tommy-kim"
                 className="angel-list"
+                target="_blank"
               >
                 <FaAngellist />
               </a>
-              <a href="https://www.linkedin.com/in/sungyotkim">
+              <a href="https://www.linkedin.com/in/sungyotkim" target="_blank">
                 <FaLinkedin />
               </a>
             </div>
@@ -199,10 +222,13 @@ function AboutPage() {
               <span>Flex developer</span>
             </div>
             <div className="teammate-card-links">
-              <a href="https://github.com/Monkwire3/">
+              <a href="https://github.com/Monkwire3/" target="_blank">
                 <FaGithubSquare />
               </a>
-              <a href="https://www.linkedin.com/in/clide-stefani-5772431a7/">
+              <a
+                href="https://www.linkedin.com/in/clide-stefani-5772431a7/"
+                target="_blank"
+              >
                 <FaLinkedin />
               </a>
             </div>
