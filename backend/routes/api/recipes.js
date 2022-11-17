@@ -44,14 +44,12 @@ router.post("/ingredients", async(req, res) => {
     }
     potSubsets.sort((a, b) => a.length > b.length ? -1 : 1);
     
-    // let ingredientScore;
     let recipesByIngredientScore = []
     let recipesByShoppingScore = []
     let recipesQuery = []
     let recipes = []
     for (let i = 0; i < potSubsets.length; i++) {
         let query = potSubsets[i]
-        //recipesQuery = await Recipe.find({"ingredients.food": {$all: query}})
         recipesQuery = await getRecipes(query)
 
         const ingredientScore = Math.round((query.length / numQueryIngredients) * 100)
